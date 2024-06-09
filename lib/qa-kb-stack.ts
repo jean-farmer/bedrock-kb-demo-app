@@ -2,7 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { aws_s3 as s3, aws_lambda as lambda, aws_iam as iam, aws_ecs as ecs } from 'aws-cdk-lib';
 import { bedrock } from "@cdklabs/generative-ai-cdk-constructs";
-import { aws_s3_deployment as s3deploy } from 'aws-cdk-lib';
+import { aws_s3_deployment as s3deploy, Duration as duration } from 'aws-cdk-lib';
 import { aws_ecs_patterns as ecsPatterns } from 'aws-cdk-lib';
 
 export class KnowledgeBasesApplication extends cdk.Stack {  
@@ -36,6 +36,7 @@ export class KnowledgeBasesApplication extends cdk.Stack {
       runtime: lambda.Runtime.PYTHON_3_10,
       code: lambda.Code.fromAsset('lambda'),
       handler: 'kb-retrieveAndGenerate.lambda_handler',
+      timeout: duration.seconds(300),
       environment: {
         'KNOWLEDGE_BASE_ID': kb.knowledgeBaseId,
       },
