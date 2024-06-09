@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import { aws_wisdom as wisdom, aws_s3 as s3, aws_lambda as lambda, aws_iam as iam, aws_ecs as ecs } from 'aws-cdk-lib';
+import { aws_s3 as s3, aws_lambda as lambda, aws_iam as iam, aws_ecs as ecs } from 'aws-cdk-lib';
 import { bedrock } from "@cdklabs/generative-ai-cdk-constructs";
 import { aws_s3_deployment as s3deploy } from 'aws-cdk-lib';
 import { aws_ecs_patterns as ecsPatterns } from 'aws-cdk-lib';

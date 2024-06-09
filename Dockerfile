@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY ./streamlit/* .
+COPY ./app/* .
 
 RUN pip3 install -r requirements.txt
 
