@@ -17,8 +17,8 @@ This repository contains resources to deploy a demo Q&A application using knowle
 2 outputs will be generated from cloudformation 
 
 ```
-Genai101WorkshopStack.DataSourceId 
-Genai101WorkshopStack.KnowledgeBaseId
+DataSourceId 
+KnowledgeBaseId
 ```
 
 These IDs can be used to sync your KB. NOTE: This will have to be run prior to first app use
